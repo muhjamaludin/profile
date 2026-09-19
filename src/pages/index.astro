@@ -1,0 +1,226 @@
+---
+import '../styles.css';
+
+const focus = [
+  {
+    title: 'Systems & Platform',
+    text: 'Distributed systems, Linux, networking, observability, automation, reliability, and the engineering glue between applications and infrastructure.',
+    tags: ['Linux', 'Networking', 'Platform', 'Observability']
+  },
+  {
+    title: 'Data Engineering',
+    text: 'Building practical data pipelines from ingestion to datalake, transformation, search, and datamart layers—with an emphasis on maintainability.',
+    tags: ['Python', 'Airflow', 'Trino', 'Elasticsearch']
+  },
+  {
+    title: 'AI × Engineering',
+    text: 'Using AI as an engineering multiplier: agents, automation, code generation, tooling, deployment, and practical integration rather than model research.',
+    tags: ['AI Agents', 'Automation', 'Tooling', 'Integration']
+  },
+  {
+    title: 'Hardware-adjacent Software',
+    text: 'Exploring the boundary between software, electronics, electrical systems, industrial automation, and low-level engineering.',
+    tags: ['C/C++', 'Rust', 'PLC/SCADA', 'Embedded']
+  }
+];
+
+const principles = [
+  'Prefer simple systems that can be understood and operated.',
+  'Use constraints to drive architecture instead of architecture debates.',
+  'Automate repetitive work, but keep the system observable.',
+  'Learn by building, debugging, measuring, and iterating.',
+  'Treat AI as a tool inside the engineering workflow—not the architecture itself.'
+];
+
+const stack = [
+  'Python', 'C / C++', 'Rust', 'Go', 'TypeScript',
+  'Linux', 'Docker', 'Airflow', 'PostgreSQL', 'Trino',
+  'Elasticsearch', 'MinIO', 'Cloudflare', 'Git'
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Jamal — System Engineer profile. Software, data, infrastructure, automation, and hardware-adjacent engineering." />
+    <title>Jamal — System Engineer</title>
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="/">J<span>.</span></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#focus">Focus</a>
+        <a href="#projects">Projects</a>
+        <a href="#principles">Principles</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Let's connect ↗</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> SYSTEM ENGINEER / DATA ENGINEER</p>
+          <h1>Building the <em>systems</em><br />behind useful software.</h1>
+          <p class="lede">
+            I'm Jamal, an engineer focused on the space between software, data,
+            infrastructure, automation, and hardware-adjacent systems.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#focus">Explore my focus ↓</a>
+            <a class="button secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+            <small>jamal@system:~</small>
+          </div>
+          <pre><code><b>$ whoami</b>
+system engineer in progress
+
+<b>$ cat direction.txt</b>
+enterprise
+  ├─ AI
+  ├─ data
+  ├─ automation
+  └─ platform
+
+<b>$ cat philosophy.txt</b>
+make it work
+make it observable
+make it maintainable
+then make it faster
+
+<b>$ status</b>
+<span class="ok">● building</span></code></pre>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Areas of interest">
+        <span>PYTHON</span><i>·</i><span>SYSTEMS</span><i>·</i><span>DATA</span><i>·</i>
+        <span>AUTOMATION</span><i>·</i><span>AI</span><i>·</i><span>INFRASTRUCTURE</span><i>·</i>
+        <span>HARDWARE</span>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="section-label">01 / ABOUT</div>
+        <div>
+          <h2>Not just writing applications.<br /><span>I want to understand the machine around them.</span></h2>
+          <p>
+            My background is in software and data engineering. Over time, my interests
+            have moved toward the deeper engineering layers: how services communicate,
+            how data moves through a system, how infrastructure behaves under constraints,
+            and how software connects to physical and industrial systems.
+          </p>
+          <p>
+            The direction is intentionally broad, but the anchor is consistent:
+            <strong>enterprise engineering through AI, data, and automation.</strong>
+          </p>
+        </div>
+      </section>
+
+      <section id="focus" class="section">
+        <div class="section-label">02 / FOCUS</div>
+        <div class="cards">
+          {focus.map((item, index) => (
+            <article class="card" data-index={index + 1}>
+              <span class="card-number">0{index + 1}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <div class="tags">
+                {item.tags.map(tag => <span>{tag}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="projects" class="section project-section">
+        <div class="section-label">03 / SELECTED WORK</div>
+        <div class="project-grid">
+          <article class="project featured">
+            <div>
+              <span class="project-type">DATA PIPELINE</span>
+              <h3>Ingestion → Datalake → Search → Datamart</h3>
+              <p>
+                A practical pipeline combining API ingestion, object storage,
+                transformation, sentiment enrichment, search, and downstream data products.
+              </p>
+            </div>
+            <div class="project-stack">Python · Airflow · MinIO · Trino · Elasticsearch</div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">AI TOOLING</span>
+            <h3>AI-assisted Engineering Workflow</h3>
+            <p>
+              Exploring coding agents, task routing, workspace guards, CLI workflows,
+              and lightweight automation around software development.
+            </p>
+            <div class="project-stack">Agents · CLI · Python · TypeScript</div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">SYSTEMS</span>
+            <h3>Small Systems, Real Constraints</h3>
+            <p>
+              Building and operating software on modest machines, where memory,
+              CPU, observability, and operational simplicity actually matter.
+            </p>
+            <div class="project-stack">Linux · Docker · VPS · Networking</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="principles" class="section principles">
+        <div class="section-label">04 / ENGINEERING PRINCIPLES</div>
+        <div>
+          <h2>How I like to build.</h2>
+          <ol>
+            {principles.map((principle, index) => (
+              <li><span>0{index + 1}</span>{principle}</li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section class="section stack-section">
+        <div class="section-label">05 / TOOLBOX</div>
+        <div class="stack-wrap">
+          {stack.map(item => <span>{item}</span>)}
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <p class="eyebrow">06 / CONTACT</p>
+        <h2>Interested in systems that<br /><em>actually have to work?</em></h2>
+        <p>Open to engineering conversations, interesting problems, and practical collaboration.</p>
+        <a class="button primary" href="mailto:hello@example.com">Say hello ↗</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>© {new Date().getFullYear()} Jamal</span>
+      <span>Built with Astro · Deployed at the edge</span>
+    </footer>
+
+    <script>
+      const nav = document.querySelector('.nav');
+      const onScroll = () => nav?.classList.toggle('scrolled', window.scrollY > 20);
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+          const target = document.querySelector(link.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
